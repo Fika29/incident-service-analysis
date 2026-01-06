@@ -25,7 +25,7 @@ Berikut merupakan detail dataset [klik di sini](https://docs.google.com/spreadsh
 ---
 
 ## Executive Summary
-![Incident Volume & SLA Trend](images/Incident_Volume_&_SLA_Trend.png)
+![Incident Volume & SLA Trend](images/Incident_Volume_SLA_Trend.png)
 
 1. **Konsentrasi Volume Insiden**  
    - Insiden tidak merata, terkonsentrasi tajam pada Maret–Mei, puncak tertinggi di Maret.  
@@ -48,7 +48,7 @@ Berikut merupakan detail dataset [klik di sini](https://docs.google.com/spreadsh
 ## Dataset Structure and ERD
 Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasikan 24.918 insiden unik dengan 36 atribut yang menggambarkan siklus hidup insiden, prioritas, penugasan, dan kinerja SLA.  
 
-![ERD](images/ERD.jpeg)
+![ERD](ERD.jpeg)
 
 - **INCIDENT**: Satu kasus insiden beserta waktu, status, dampak, prioritas, dan kategori layanan.  
 - **ASSIGNMENT_GROUP**: Tim atau unit yang menangani insiden.  
@@ -71,7 +71,7 @@ Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasika
 ![Incident Concentration by Category](images/Incident_Concentration_by_Category.png)  
 - 3 kategori menyumbang >33% dari total incident.  
 - Incident berulang pada kategori yang sama menunjukkan masalah struktural.  
-- Fokus perbaikan pada kategori inti → penurunan incident signifikan.
+- Fokus perbaikan pada kategori inti dapat mengurangi incident secara signifikan.
 
 ### 3) Resolution Efficiency by Priority (Dimensi: Prioritas)
 ![Resolution Efficiency by Priority](images/Resolution_Efficiency_by_Priority.png)  
@@ -82,14 +82,14 @@ Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasika
 ### 4) SLA Risk by Priority (Dimensi: Prioritas vs SLA)
 ![SLA Risk by Priority](images/SLA_Risk_by_Priority.png)  
 - Incident Critical & High paling sering melanggar SLA.  
-- Semakin tinggi dampak → semakin besar kemungkinan terlambat.  
-- Incident kritikal → komplain besar, tekanan manajemen, gangguan bisnis.
+- Semakin tinggi dampak maka semakin besar kemungkinan terlambat.  
+- Incident kritikal menimbulkan komplain besar, tekanan manajemen, gangguan bisnis.
 
 ### 5) Team Workload Distribution (Dimensi: Assignment Group)
 ![Team Workload Distribution](images/Team_Workload_Distribution.png)  
 - 1 tim menangani ±33% dari total incident.  
 - Ketergantungan ini menciptakan single point of failure.  
-- Ketidakseimbangan → risiko gangguan layanan tinggi.
+- Ketidakseimbangan workload meningkatkan risiko gangguan layanan tinggi.
 
 ### 6) Team Performance & Bottleneck Risk (Dimensi: Group Performance)
 ![Team Performance & Bottleneck Risk](images/Team_Performance_Bottleneck_Risk.png)  
@@ -99,8 +99,8 @@ Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasika
 ### 7) SLA Exposure by Service Category (Dimensi: Kategori vs SLA)
 ![SLA Exposure by Service Category](images/SLA_Exposure_by_Service_Category.png)  
 - Kategori dengan incident terbanyak paling sering melanggar SLA.  
-- Volume tinggi → kegagalan SLA tinggi, pola konsisten.  
-- Perbaikan di kategori ini → stabilitas layanan terbesar.
+- Volume tinggi berpotensi kegagalan SLA juga tinggi, pola konsisten.  
+- Perbaikan di kategori ini memberi dampak stabilitas layanan terbesar.
 
 ---
 
@@ -137,4 +137,4 @@ Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasika
 ---
 
 ## Citation Dataset
-Amaral, C. A. L., Fantinato, M., Reijers, H. A., Peres, S. M. (2019). *Enhancing Completion Time Prediction Through Attribute Selection*. Proceedings of the 15th International Conference on Advanced Information Technologies for Management (AITM 2018).
+Amaral, C. A. L., Fantinato, M., Reijers, H. A., Peres, S. M. (2019). *Enhancing Completion Time Prediction Through Attribute Selection*
