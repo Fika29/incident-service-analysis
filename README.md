@@ -1,5 +1,4 @@
 <!-- Header Image -->
-<!-- Header Image -->
 <p align="center">
   <img src="https://i2.wp.com/theonlinecorner.com/wp-content/uploads/2020/02/image-3.png?fit=1024%2C294&ssl=1" width="800"/>
 </p>
@@ -26,7 +25,7 @@ Berikut merupakan detail dataset [klik di sini](https://docs.google.com/spreadsh
 ---
 
 ## Executive Summary
-![Incident Volume & SLA Trend](https://raw.githubusercontent.com/username/repo/Fika29-patch-2/images/Incident_Volume_SLA_Trend.png)
+![Incident Volume & SLA Trend](images/Incident_Volume_&_SLA_Trend.png)
 
 1. **Konsentrasi Volume Insiden**  
    - Insiden tidak merata, terkonsentrasi tajam pada Maret–Mei, puncak tertinggi di Maret.  
@@ -49,7 +48,7 @@ Berikut merupakan detail dataset [klik di sini](https://docs.google.com/spreadsh
 ## Dataset Structure and ERD
 Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasikan 24.918 insiden unik dengan 36 atribut yang menggambarkan siklus hidup insiden, prioritas, penugasan, dan kinerja SLA.  
 
-![ERD](path/to/ERD.jpeg)
+![ERD](images/ERD.jpeg)
 
 - **INCIDENT**: Satu kasus insiden beserta waktu, status, dampak, prioritas, dan kategori layanan.  
 - **ASSIGNMENT_GROUP**: Tim atau unit yang menangani insiden.  
@@ -62,43 +61,43 @@ Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasika
 ## Insights Deep-Dive
 
 ### 1) Service Stability Trends (Dimensi: Number / Bulan)
-![Service Stability Trends](path/to/Service Stability Trends.png)  
+![Service Stability Trends](images/Service_Stability_Trends.png)  
 - Total incident per bulan: 141.712  
 - Lonjakan ekstrem hanya di Maret–Mei, bulan lain stabil.  
 - Menunjukkan seasonality operasional atau efek perubahan sistem.  
 - Tanpa penyesuaian kapasitas tim, periode puncak berisiko menjadi gangguan layanan berskala luas.
 
 ### 2) Incident Concentration by Category (Dimensi: Kategori Layanan)
-![Incident Concentration by Category](path/to/Incident Concentration by Category.png)  
+![Incident Concentration by Category](images/Incident_Concentration_by_Category.png)  
 - 3 kategori menyumbang >33% dari total incident.  
 - Incident berulang pada kategori yang sama menunjukkan masalah struktural.  
 - Fokus perbaikan pada kategori inti → penurunan incident signifikan.
 
 ### 3) Resolution Efficiency by Priority (Dimensi: Prioritas)
-![Resolution Efficiency by Priority](path/to/Resolution Efficiency by Priority.png)  
+![Resolution Efficiency by Priority](images/Resolution_Efficiency_by_Priority.png)  
 - 93% incident selesai sesuai SLA.  
 - Kepatuhan SLA tinggi tapi incident kompleks berulang tetap terjadi.  
 - Pelanggaran kecil berulang dapat mengikis kepercayaan pengguna.
 
 ### 4) SLA Risk by Priority (Dimensi: Prioritas vs SLA)
-![SLA Risk by Priority](path/to/SLA Risk by Priority.png)  
+![SLA Risk by Priority](images/SLA_Risk_by_Priority.png)  
 - Incident Critical & High paling sering melanggar SLA.  
 - Semakin tinggi dampak → semakin besar kemungkinan terlambat.  
 - Incident kritikal → komplain besar, tekanan manajemen, gangguan bisnis.
 
 ### 5) Team Workload Distribution (Dimensi: Assignment Group)
-![Team Workload Distribution](path/to/Team Workload Distribution.png)  
+![Team Workload Distribution](images/Team_Workload_Distribution.png)  
 - 1 tim menangani ±33% dari total incident.  
 - Ketergantungan ini menciptakan single point of failure.  
 - Ketidakseimbangan → risiko gangguan layanan tinggi.
 
 ### 6) Team Performance & Bottleneck Risk (Dimensi: Group Performance)
-![Team Performance & Bottleneck Risk](path/to/Team Performance & Bottleneck Risk.png)  
+![Team Performance & Bottleneck Risk](images/Team_Performance_Bottleneck_Risk.png)  
 - Rata-rata cepat, tapi kasus ekstrem sangat lama.  
 - Bottleneck tersembunyi, meningkatkan biaya operasional dan backlog.
 
 ### 7) SLA Exposure by Service Category (Dimensi: Kategori vs SLA)
-![SLA Exposure by Service Category](path/to/SLA Exposure by Service Category.png)  
+![SLA Exposure by Service Category](images/SLA_Exposure_by_Service_Category.png)  
 - Kategori dengan incident terbanyak paling sering melanggar SLA.  
 - Volume tinggi → kegagalan SLA tinggi, pola konsisten.  
 - Perbaikan di kategori ini → stabilitas layanan terbesar.
