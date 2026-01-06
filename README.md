@@ -1,6 +1,6 @@
 <!-- Header Image -->
 <p align="center">
-  <img src="https://i2.wp.com/theonlinecorner.com/wp-content/uploads/2020/02/image-3.png?fit=1024%2C294&ssl=1" width="800"/>
+  <img src="https://i2.wp.com/theonlinecorner.com/wp-content/uploads/2020/02/image-3.png?fit=1024%2C294&ssl=1" width="600"/>
 </p>
 
 # ServiceNow Incident Log Analysis
@@ -20,12 +20,14 @@ Sistem incident management ini berasal dari platform ServiceNow™ yang digunaka
 - **Team Performance & Bottleneck Risk** — Mengidentifikasi bottleneck operasional dan risiko keterlambatan laten.
 - **SLA Exposure by Service Category** — Menentukan kategori layanan dengan eksposur risiko SLA tertinggi.
 
-Berikut merupakan detail dataset [klik di sini](https://docs.google.com/spreadsheets/d/17DfAtrhOkbuS4jRxa-D6CEiXiAdRiC1x/edit?usp=sharing&ouid=103087631584714947994&rtpof=true&sd=true)
+Berikut merupakan detail dataset [Klik di sini](https://docs.google.com/spreadsheets/d/17DfAtrhOkbuS4jRxa-D6CEiXiAdRiC1x/edit?usp=sharing&ouid=103087631584714947994&rtpof=true&sd=true)
 
 ---
 
 ## Executive Summary
-![Incident Volume & SLA Trend](images/Incident_Volume_SLA_Trend.png)
+<p align="center">
+  <img src="images/Incident_Volume_SLA_Trend.png" width="600"/>
+</p>
 
 1. **Konsentrasi Volume Insiden**  
    - Insiden tidak merata, terkonsentrasi tajam pada Maret–Mei, puncak tertinggi di Maret.  
@@ -48,7 +50,9 @@ Berikut merupakan detail dataset [klik di sini](https://docs.google.com/spreadsh
 ## Dataset Structure and ERD
 Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasikan 24.918 insiden unik dengan 36 atribut yang menggambarkan siklus hidup insiden, prioritas, penugasan, dan kinerja SLA.  
 
-![ERD](ERD.jpeg)
+<p align="center">
+  <img src="ERD.jpeg" width="400"/>
+</p>
 
 - **INCIDENT**: Satu kasus insiden beserta waktu, status, dampak, prioritas, dan kategori layanan.  
 - **ASSIGNMENT_GROUP**: Tim atau unit yang menangani insiden.  
@@ -61,43 +65,64 @@ Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasika
 ## Insights Deep-Dive
 
 ### 1) Service Stability Trends (Dimensi: Number / Bulan)
-![Service Stability Trends](images/Service_Stability_Trends.png)  
+<p align="center">
+  <img src="images/Service_Stability_Trends.png" width="600"/>
+</p> 
+
 - Total incident per bulan: 141.712  
 - Lonjakan ekstrem hanya di Maret–Mei, bulan lain stabil.  
 - Menunjukkan seasonality operasional atau efek perubahan sistem.  
 - Tanpa penyesuaian kapasitas tim, periode puncak berisiko menjadi gangguan layanan berskala luas.
 
 ### 2) Incident Concentration by Category (Dimensi: Kategori Layanan)
-![Incident Concentration by Category](images/Incident_Concentration_by_Category.png)  
+<p align="center">
+  <img src="images/Incident_Concentration_by_Category.png" width="600"/>
+</p>  
+
 - 3 kategori menyumbang >33% dari total incident.  
 - Incident berulang pada kategori yang sama menunjukkan masalah struktural.  
 - Fokus perbaikan pada kategori inti dapat mengurangi incident secara signifikan.
 
 ### 3) Resolution Efficiency by Priority (Dimensi: Prioritas)
-![Resolution Efficiency by Priority](images/Resolution_Efficiency_by_Priority.png)  
+<p align="center">
+  <img src="images/Resolution_Efficiency_by_Priority.png" width="600"/>
+</p>  
+
 - 93% incident selesai sesuai SLA.  
 - Kepatuhan SLA tinggi tapi incident kompleks berulang tetap terjadi.  
 - Pelanggaran kecil berulang dapat mengikis kepercayaan pengguna.
 
 ### 4) SLA Risk by Priority (Dimensi: Prioritas vs SLA)
-![SLA Risk by Priority](images/SLA_Risk_by_Priority.png)  
+<p align="center">
+  <img src="images/SLA_Risk_by_Priority.png" width="600"/>
+</p>  
+
 - Incident Critical & High paling sering melanggar SLA.  
 - Semakin tinggi dampak maka semakin besar kemungkinan terlambat.  
 - Incident kritikal menimbulkan komplain besar, tekanan manajemen, gangguan bisnis.
 
 ### 5) Team Workload Distribution (Dimensi: Assignment Group)
-![Team Workload Distribution](images/Team_Workload_Distribution.png)  
+<p align="center">
+  <img src="images/Team_Workload_Distribution.png" width="600"/>
+</p>  
+
 - 1 tim menangani ±33% dari total incident.  
 - Ketergantungan ini menciptakan single point of failure.  
 - Ketidakseimbangan workload meningkatkan risiko gangguan layanan tinggi.
 
 ### 6) Team Performance & Bottleneck Risk (Dimensi: Group Performance)
-![Team Performance & Bottleneck Risk](images/Team_Performance_Bottleneck_Risk.png)  
+<p align="center">
+  <img src="images/Team_Performance_Bottleneck_Risk.png" width="600"/>
+</p>  
+
 - Rata-rata cepat, tapi kasus ekstrem sangat lama.  
 - Bottleneck tersembunyi, meningkatkan biaya operasional dan backlog.
 
 ### 7) SLA Exposure by Service Category (Dimensi: Kategori vs SLA)
-![SLA Exposure by Service Category](images/SLA_Exposure_by_Service_Category.png)  
+<p align="center">
+  <img src="images/SLA_Exposure_by_Service_Category.png" width="600"/>
+</p>  
+
 - Kategori dengan incident terbanyak paling sering melanggar SLA.  
 - Volume tinggi berpotensi kegagalan SLA juga tinggi, pola konsisten.  
 - Perbaikan di kategori ini memberi dampak stabilitas layanan terbesar.
@@ -106,35 +131,42 @@ Struktur basis data ini terdiri dari 141.712 catatan event yang merepresentasika
 
 ## Recommendation
 
-1. **Time-Based Stability (Incident per Month)**  
+1. **Time-Based Stability**  
    - Audit aktivitas sistem dan change pada Maret–Mei, siapkan capacity planning.  
-   - Prioritas: High | Owner: IT Ops Lead, Change Management  
+   - Prioritas: High
+   - Owner: IT Ops Lead, Change Management
 
-2. **Service Concentration Risk (Incident by Category)**  
+2. **Service Concentration Risk**  
    - RCA terfokus pada 3 kategori penyumbang terbesar.  
-   - Prioritas: Critical | Owner: System Owner, Risk Management  
+   - Prioritas: Critical
+   - Owner: System Owner, Risk Management  
 
-3. **Resolution Efficiency Control (Resolution Time by Priority)**  
+3. **Resolution Efficiency Control**  
    - Tetapkan early-warning SLA, monitoring rutin.  
-   - Prioritas: Moderate | Owner: Service Delivery  
+   - Prioritas: Moderate
+   - Owner: Service Delivery  
 
-4. **Critical Incident Handling (SLA by Priority)**  
+4. **Critical Incident Handling**  
    - Perkuat escalation playbook untuk Critical & High.  
-   - Prioritas: High | Owner: IT Ops Manager  
+   - Prioritas: High
+   - Owner: IT Ops Manager  
 
-5. **Workload Resilience (Incident by Assignment Group)**  
+5. **Workload Resilience**  
    - Redistribusi beban dan cross-training.  
-   - Prioritas: High | Owner: Ops Head  
+   - Prioritas: High
+   - Owner: Ops Head  
 
-6. **Hidden Bottleneck Detection (Resolution Time by Group)**  
+6. **Hidden Bottleneck Detection**  
    - Tambahkan KPI median & P95, deep dive group outlier.  
-   - Prioritas: Moderate–High | Owner: ITSM Lead, Process Improvement  
+   - Prioritas: Moderate–High
+   - Owner: ITSM Lead, Process Improvement  
 
-7. **SLA Exposure Hotspots (SLA by Category)**  
+7. **SLA Exposure Hotspots**  
    - Prioritaskan automation & defect prevention pada kategori risiko tinggi.  
-   - Prioritas: Critical | Owner: Application Owner  
+   - Prioritas: Critical
+   - Owner: Application Owner  
 
 ---
 
 ## Citation Dataset
-Amaral, C. A. L., Fantinato, M., Reijers, H. A., Peres, S. M. (2019). *Enhancing Completion Time Prediction Through Attribute Selection*
+Amaral, C. A. L., Fantinato, M., Reijers, H. A., Peres, S. M. (2019). Enhancing Completion Time Prediction Through Attribute Selection. Proceedings of the 15th International Conference on Advanced Information Technologies for Management (AITM 2018).
